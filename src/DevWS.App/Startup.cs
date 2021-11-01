@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using Dev.WS.Data.Context;
 using Dev.WS.Business.Interfaces;
 using Dev.WS.Data.Repository;
+using AutoMapper;
 
 namespace DevWS.App
 {
@@ -50,6 +51,8 @@ namespace DevWS.App
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddScoped<MeuDbContext>();

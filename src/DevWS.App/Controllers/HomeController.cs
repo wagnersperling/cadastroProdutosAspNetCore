@@ -1,4 +1,4 @@
-﻿using DevWS.App.Models;
+﻿using DevWS.App.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
