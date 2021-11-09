@@ -19,4 +19,9 @@
     <ProjectReference Include="..\Dev.WS.Data\Dev.WS.Data.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="wwwroot\imagens\" />
+  </ItemGroup>
+
 </Project>
