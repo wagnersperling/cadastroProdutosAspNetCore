@@ -61,11 +61,9 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script>
         $("#ImagemUpload").change(function () {
-            debugger;
             $("#img_nome").text(this.files[0].name);
             $("#img_nome")[0].style.display = 'block';
         });
-        debugger;
         $("#ImagemUpload").attr("data-val", "true");
         $("#ImagemUpload").atrr("data-val-required", "Preencha o campo Imagem");
     </script>
