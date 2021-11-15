@@ -32,7 +32,7 @@ namespace DevWS.App.Controllers
 
         public async Task<IActionResult> Details(Guid id)
         {
-            var produtoViewModel = await _produtoRepository.ObterPorId(id);
+            var produtoViewModel = _mapper.Map<ProdutoViewModel>(await _produtoRepository.ObterPorId(id));
             if (produtoViewModel == null)
             {
                 return NotFound();
