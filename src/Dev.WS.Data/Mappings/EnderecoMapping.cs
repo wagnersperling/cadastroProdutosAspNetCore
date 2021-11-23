@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Dev.WS.Data.Mappings
 {
-    class EnderecorMapping : IEntityTypeConfiguration<Endereco>
+    class EnderecoMapping : IEntityTypeConfiguration<Endereco>
     {
         public void Configure(EntityTypeBuilder<Endereco> builder)
         {
