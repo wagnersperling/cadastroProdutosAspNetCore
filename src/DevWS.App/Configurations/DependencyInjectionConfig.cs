@@ -1,13 +1,11 @@
 ﻿using Dev.WS.Business.Interfaces;
+using Dev.WS.Business.Notifications;
+using Dev.WS.Business.Services;
 using Dev.WS.Data.Context;
 using Dev.WS.Data.Repository;
 using DevWS.App.Extensions;
 using Microsoft.AspNetCore.Mvc.DataAnnotations;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DevWS.App.Configurations
 {
@@ -20,6 +18,10 @@ namespace DevWS.App.Configurations
             services.AddScoped<IEnderecoRepository, EnderecoRepository>();
             services.AddScoped<IFornecedorRepository, FornecedorRepository>();
             services.AddSingleton<IValidationAttributeAdapterProvider, MoedaValidationAttributeAdapterProvider>();
+
+            services.AddScoped<INotificador, Notificador>();
+            services.AddScoped<IFornecedorService, FornecedorService>();
+            services.AddScoped<IProdutoService, ProdutoService>();
             return services;
         }
     }

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Dev.WS.Business.Interfaces
 {
-    public interface IFornecedoresService
+    public interface IFornecedorService : IDisposable
     {
         Task Adicionar(Fornecedor fornecedor);
         Task Atualizar(Fornecedor fornecedor);
