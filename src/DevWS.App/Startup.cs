@@ -51,7 +51,8 @@ namespace DevWS.App
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");                
+                app.UseExceptionHandler("/Error/500");
+                app.UseStatusCodePagesWithReExecute("/erro/{0}");
                 app.UseHsts();
             }
 
